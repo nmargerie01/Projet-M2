@@ -15,7 +15,4 @@ void afficher (){
     System.out.println("L'ordonnee de ce coin est : "+this.cy);
 }
 
-public void toString (){   
-}
-
 }
