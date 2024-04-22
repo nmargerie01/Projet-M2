@@ -14,4 +14,8 @@ void afficher (){
     System.out.println("L'abcisse de ce coin est : "+this.cx);
     System.out.println("L'ordonnee de ce coin est : "+this.cy);
 }
+
+public void toString (){   
+}
+
 }
