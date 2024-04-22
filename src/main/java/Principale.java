@@ -1,43 +1,9 @@
-
-import java.io.IOException;
-import java.util.ArrayList;
-import java.io.BufferedReader;
-import java.io.FileReader;
+import java.io.*;
+import java.util.*;
 
 public class Principale {
 
     public static void main(String[] args) {
-
-        String csvFile = "CatalogueRevetements.txt";
-        String line;
-        String cvsSplitBy = ";"; // Séparateur de colonnes
-        
-        ArrayList<String[]> listeRevetement = new ArrayList<>(); 
-
-        try (BufferedReader br = new BufferedReader(new FileReader(csvFile))) {
-
-            while ((line = br.readLine()) != null) {
-
-                String[] data = line.split(cvsSplitBy);
-
-                if (data.length == 6) {
-                    listeRevetement.add(data);
-                } else {
-                    System.out.println("Erreur: la ligne ne contient pas six colonnes");
-                }
-            }
-
-            for (String[] rowData : listeRevetement) {
-                for (String columnData : rowData) {
-                    System.out.print(columnData + "\t");
-                }
-                System.out.println();
-            }
-
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
 
 //Création de coins
         int reponsecoin;
