@@ -1,8 +1,4 @@
-
-import java.io.IOException;
-
-public class Lire {
-    import java.io.*;
+import java.io.*;
 
 public class Lire
 {    
@@ -583,6 +579,4 @@ public class Lire
 
         return resultat;
     } // fin de String separer(int nombre)
-}}
-
-
+}
