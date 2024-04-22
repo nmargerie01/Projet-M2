@@ -28,14 +28,24 @@ File csvFile = new File ("CatalogueRevetements.txt");
 FileReader fr = new FileReader(csvFile);
 BufferedReader br = new BufferedReader(fr);  
 String line; 
-int id = 0;
-String nom = "";
-boolean mur = false;
-boolean sol = false;
-boolean plafond = false;
-double partie2 = 0;
+while((line = br.readLine()) != null){
+    int id = 0;
+    String nom = "";
+    boolean mur = false;
+    boolean sol = false;
+    boolean plafond = false;
+    double prix = 0;
+    
+    }
+    fr.close();
+}
+catch(FileNotFoundException err){
+    System.out.println( "Erreur :le fichier n’existe pas!\n "+err);}
+catch(IOException err){
+System.out.println(" Erreur :\n "+err);}
+        
 
-        String[] parties = line.split(";");
+String[] parties = line.split(";");
 			partie1 = parties[0];
             partie2 = parties[1];
 
