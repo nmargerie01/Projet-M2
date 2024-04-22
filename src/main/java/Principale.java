@@ -1,18 +1,42 @@
 
+import java.io.IOException;
 import java.util.ArrayList;
-
+import java.io.BufferedReader;
+import java.io.FileReader;
 
 public class Principale {
 
     public static void main(String[] args) {
 
-    System.out.println("Que voulez vous faire : Créer (1), Modifier (2), Supprimer (3)");
-    int voeu ;
-    voeu=Lire.i();
-    
-    if (voeu == 1){
+        String csvFile = "CatalogueRevetements.txt";
+        String line;
+        String cvsSplitBy = ";"; // Séparateur de colonnes
         
-    
+        ArrayList<String[]> listeRevetement = new ArrayList<>(); 
+
+        try (BufferedReader br = new BufferedReader(new FileReader(csvFile))) {
+
+            while ((line = br.readLine()) != null) {
+
+                String[] data = line.split(cvsSplitBy);
+
+                if (data.length == 6) {
+                    listeRevetement.add(data);
+                } else {
+                    System.out.println("Erreur: la ligne ne contient pas six colonnes");
+                }
+            }
+
+            for (String[] rowData : listeRevetement) {
+                for (String columnData : rowData) {
+                    System.out.print(columnData + "\t");
+                }
+                System.out.println();
+            }
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
 
 //Création de coins
@@ -61,11 +85,10 @@ public class Principale {
         am=new Coin(0,0,0);
         bm=new Coin(0,0,0);
         
-        //Déclaration de la ArrayList        
+              
         ArrayList <Mur> listeMur;
-        //Initialisation de la liste
         listeMur=new ArrayList<>();
-        //Boucle de saisie et d'ajout de Murs dans la liste
+        
         while(reponsemur!=0){
             System.out.println("Identifiant:");
             int idm=Lire.i();
@@ -99,7 +122,7 @@ public class Principale {
              listeMur.get(i).afficher();
         }
 
-    }}}
+    }}
 
 
 
