@@ -52,8 +52,7 @@ public class Principale {
         bm=new Coin(0,0,0);
         
               
-        ArrayList <Mur> listeMur;
-        listeMur=new ArrayList<>();
+        ArrayList <Mur> listeMur = new ArrayList<>();
         
         while(reponsemur!=0){
             System.out.println("Identifiant:");

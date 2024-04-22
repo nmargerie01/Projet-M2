@@ -27,10 +27,25 @@ try
 File csvFile = new File ("CatalogueRevetements.txt");
 FileReader fr = new FileReader(csvFile);
 BufferedReader br = new BufferedReader(fr);  
-String line;
-String cvsSplitBy = ";"; 
+String line; 
+int id = 0;
+String nom = "";
+boolean mur = false;
+boolean sol = false;
+boolean plafond = false;
+double partie2 = 0;
 
+        String[] parties = line.split(";");
+			partie1 = parties[0];
+            partie2 = parties[1];
 
+fr.close();
+}
+catch(FileNotFoundException err){
+System.out.println( "Erreur :le fichier n’existe pas!\n "+err);}
+catch(IOException err){
+System.out.println(" Erreur :\n "+err);}
+}
     
     
     String line;
@@ -45,12 +60,7 @@ String cvsSplitBy = ";";
 					start = true;
 				}		
 			}
-			fr.close();
-		}
-		catch(FileNotFoundException err){
-			System.out.println( "Erreur :le fichier n’existe pas!\n "+err);}
-		catch(IOException err){
-			System.out.println(" Erreur :\n "+err);}
+			
 	
 	System.out.println("\\end{tikzpicture}\n\\end{document}");
 
