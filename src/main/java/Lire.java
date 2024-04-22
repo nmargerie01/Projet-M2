@@ -583,6 +583,6 @@ public class Lire
 
         return resultat;
     } // fin de String separer(int nombre)
-}
+}}
 
 
