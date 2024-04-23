@@ -2,28 +2,30 @@ import java.util.ArrayList;
 
 public class Coin {
     int idCoin;
-    double cx, cy;
+    double x, y;
     
-    Coin (int id,double abscisse, double ordonnee){
+    public Coin (int id,double x, double y){
         this.idCoin=id;
-        this.cx=abscisse;
-        this.cy=ordonnee;   
-}
-   
-ArrayList <Coin> listeCoin = new ArrayList<>();
+        this.x=x;
+        this.y=y;}
 
-void afficher (){
-    System.out.println("L'identifiant de ce coin est : "+this.idCoin);
-    System.out.println("L'abcisse de ce coin est : "+this.cx);
-    System.out.println("L'ordonnee de ce coin est : "+this.cy);
-}
+    public int getIdCoin() {
+        return idCoin;}
+
+    public double getX() {
+        return x;}
+
+    public double getY() {
+        return y;}
+
+    ArrayList <Coin> listeCoin = new ArrayList<>();
 
 @Override
     public String toString() {
         return "Coin{" +
                 "idCoin=" + idCoin +
-                ", cx=" + cx +
-                ", cy=" + cy +
+                ", x=" + x +
+                ", y=" + y +
                 '}';
     }
 }
