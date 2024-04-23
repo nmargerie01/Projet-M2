@@ -27,8 +27,8 @@ public class Principale {
         System.out.println("Identifiant du Coin recheché:");
         int idRechc=Lire.i();
             for (int i=0;i<listeCoin.size();i++){     
-                if (listeCoin.get(i).idCoin==idRechc)
-                    listeCoin.get(i).toString();}}
+                if (listeCoin.get(i).idCoin==idRechc){
+                    return listeCoin.get(i).toString();}}}
         
     public void creationmur (){
         System.out.println("Identifiant:");
