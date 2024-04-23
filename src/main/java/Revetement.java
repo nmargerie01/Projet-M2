@@ -20,7 +20,7 @@ public class Revetement {
 
     ArrayList<Revetement> listeRevetement = new ArrayList<>();
     File csvFile = new File("CatalogueRevetements.txt");
-    
+   
     try (BufferedReader br = new BufferedReader(new FileReader(csvFile))) {
         String line;
         while ((line = br.readLine()) != null) {
@@ -63,3 +63,4 @@ public class Revetement {
                 '}';
     }
 }
+
