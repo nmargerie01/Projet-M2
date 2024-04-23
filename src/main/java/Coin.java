@@ -1,14 +1,13 @@
 import java.util.ArrayList;
 
 public class Coin {
- 
-int idCoin;
-double cx, cy;
+    int idCoin;
+    double cx, cy;
     
-Coin (int id,double a, double b){
-    this.idCoin=id;
-    this.cx=a;
-    this.cy=b;   
+    Coin (int id,double abscisse, double ordonnee){
+        this.idCoin=id;
+        this.cx=abscisse;
+        this.cy=ordonnee;   
 }
    
 ArrayList <Coin> listeCoin = new ArrayList<>();
