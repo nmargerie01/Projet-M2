@@ -28,7 +28,7 @@ public class Principale {
         int idRechc=Lire.i();
             for (int i=0;i<listeCoin.size();i++){     
                 if (listeCoin.get(i).idCoin==idRechc)
-                    listeCoin.get(i).toString();}
+                    listeCoin.get(i).toString();}}
         
     public void creationmur (){
         System.out.println("Identifiant:");
@@ -54,18 +54,13 @@ public class Principale {
         listeMur.add(m);}
     
     public void recherchemur (){
-
-        //Recherche d'un Murs dans listeMurs par son identifiant
         System.out.println("Identifiant du Mur recheché:");
         int idRechm=Lire.i();
-        
-        for (int i=0;i<listeMur.size();i++)
-        {     
+        for (int i=0;i<listeMur.size();i++){     
             if (listeMur.get(i).idMur==idRechm)
-             listeMur.get(i).afficher();
-        }
+                listeMur.get(i).afficher();}}
 
-    }}
+}
 
 
 
