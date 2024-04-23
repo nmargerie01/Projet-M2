@@ -23,12 +23,14 @@ public class Principale {
         Coin c = new Coin(idc,ac,bc);
         listeCoin.add(c);}
         
-    public String recherchecoin (){
+    public void recherchecoin (){
         System.out.println("Identifiant du Coin recheché:");
         int idRechc=Lire.i();
             for (int i=0;i<listeCoin.size();i++){     
-                if (listeCoin.get(i).idCoin==idRechc){
-                    return listeCoin.get(i).toString();}}}
+                if (listeCoin.get(i).idCoin ==idRechc){
+                    listeCoin.get(idRechc).toString();}
+                else {
+                    System.out.println("Pas de coin correspondant");}}}
         
     public void creationmur (){
         System.out.println("Identifiant:");
