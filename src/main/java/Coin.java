@@ -1,3 +1,6 @@
+
+import java.util.ArrayList;
+
 public class Coin {
  
 int idCoin;
@@ -8,7 +11,9 @@ Coin (int id,double a, double b){
     this.cx=a;
     this.cy=b;   
 }
-    
+   
+ArrayList <Coin> listeCoin = new ArrayList<>();
+
 void afficher (){
     System.out.println("L'identifiant de ce coin est : "+this.idCoin);
     System.out.println("L'abcisse de ce coin est : "+this.cx);

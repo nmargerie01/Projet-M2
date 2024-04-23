@@ -28,6 +28,20 @@ Plafond (int id,Coin a, Coin b, Coin c, Coin d, Revetement revplafond){
                 ", revplafond=" + revplafond +
                 '}';
     }
-
+    
+    public double Surface() {
+        int a,b,c,d,e,f;
+        double l,L,surface;
+        a=listePlafond.get(idPlafond).coin1.cx;
+        b=listePlafond.get(idPlafond).coin1.cy;
+        c=listePlafond.get(idPlafond).coin2.cx;
+        d=listePlafond.get(idPlafond).coin2.cy;
+        e=listePlafond.get(idPlafond).coin3.cx;
+        f=listePlafond.get(idPlafond).coin3.cy;
+        l=Math.sqrt(((a-c)*(a-c))+((b-d)*(b-d)));
+        L=Math.sqrt(((e-c)*(e-c))+((f-d)*(f-d)));
+        surface=l*L;
+        return "Surface = "+surface;
+    }
 }
 

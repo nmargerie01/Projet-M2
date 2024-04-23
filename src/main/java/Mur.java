@@ -18,7 +18,7 @@ public class Mur {
     void afficher (){
     System.out.println("L'identifiant de ce mur est : "+this.idMur+ ", il relie les coins "+this.CoinDebut.idCoin+" et "+this.CoinFin.idCoin+". Il comporte "+this.nbFenetre+" fenetres et "+this.nbPorte+" portes.");
     }
- /*   
+   
     public double surface (idMur,idNiveau);
     int a,b,c,e,h,f,p;
     double d, surface;
@@ -31,7 +31,7 @@ public class Mur {
     p=listeMur.get(idMur).nbPorte;
     d=Math.sqrt(((a-c)*(a-c))+((b-e)*(b-e)));
     surface=((d*h)-((f*1.44)+(p*1.68));
-*/
+
 }
 
 
