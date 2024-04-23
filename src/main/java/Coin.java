@@ -15,4 +15,12 @@ void afficher (){
     System.out.println("L'ordonnee de ce coin est : "+this.cy);
 }
 
+@Override
+    public String toString() {
+        return "Coin{" +
+                "idCoin=" + idCoin +
+                ", cx=" + cx +
+                ", cy=" + cy +
+                '}';
+    }
 }
