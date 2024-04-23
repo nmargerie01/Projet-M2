@@ -30,12 +30,23 @@ BufferedReader br = new BufferedReader(fr);
 String line; 
 while((line = br.readLine()) != null){
     String[] parties = line.split(";");
-    int id = parties[0].toInt();
+    int id = Integer.valueOf(parties[0]);
     String nom = parties[1];
-    boolean mur = parties[2];
-    boolean sol = parties[3];
-    boolean plafond = parties[4];
-    double prix = parties[5];
+    if (Integer.valueOf(parties[2]) == 0){
+        boolean mur = false;}
+    if (Integer.valueOf(parties[2]) == 1);{
+        boolean mur = true;}
+    if (Integer.valueOf(parties[3]) == 0);{
+        boolean sol = false;}
+    if (Integer.valueOf(parties[3]) == 1);{
+        boolean sol = true;}
+    if (Integer.valueOf(parties[4]) == 0);{
+        boolean plafond = false;}
+    if (Integer.valueOf(parties[4]) == 1);{
+        boolean plafond = true;}
+    double prix = Double.parseDouble(parties[5]);
+    Revetement r = new Revetement (id, nom, mur, sol, plafond, prix);
+    listeRevetement.add(r);      
 }
 fr.close();
 }
