@@ -20,7 +20,7 @@ Plafond (int id,Coin a, Coin b, Coin c, Coin d, Revetement revplafond){
 @Override
     public String toString() {
         return "Plafond{" +
-                "idPlafond=" + idRevetement +
+                "idPlafond=" + idPlafond +
                 ", coin1=" + coin1 + 
                 ", coin2=" + coin2 +
                 ", coin3=" + coin3 +
