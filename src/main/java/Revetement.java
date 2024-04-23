@@ -46,16 +46,12 @@ while((line = br.readLine()) != null){
         boolean plafond = true;}
     double prix = Double.parseDouble(parties[5]);
     Revetement r = new Revetement (id, nom, mur, sol, plafond, prix);
-    listeRevetement.add(r);      
-}
+    listeRevetement.add(r);}
 fr.close();
 }
 catch(FileNotFoundException err){
     System.out.println( "Erreur :le fichier n’existe pas!\n "+err);}
 catch(IOException err){
 System.out.println(" Erreur :\n "+err);}
-        
 
-String[] parties = line.split(";");
-    partie1 = parties[0];
-    partie2 = parties[1];
+}
