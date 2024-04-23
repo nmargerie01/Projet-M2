@@ -18,9 +18,7 @@ public class Coin {
     public double getY() {
         return y;}
 
-    ArrayList <Coin> listeCoin = new ArrayList<>();
-
-@Override
+    @Override
     public String toString() {
         return "Coin{" +
                 "idCoin=" + idCoin +
