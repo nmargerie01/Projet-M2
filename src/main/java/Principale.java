@@ -5,32 +5,28 @@ public class Principale {
 
     public static void main(String[] args) {
 
-//Création de coins
-        int reponsecoin;
-        System.out.println(" Voulez vous créer un coin ? 1=oui et 0=non");
-        reponsecoin=Lire.i();
+    ArrayList <Mur> listeMur = new ArrayList<>();
+    ArrayList <Sol> listeSol = new ArrayList<>();
+    ArrayList <Plafond> listePlafond = new ArrayList<>();
+    ArrayList <Piece> listePiece = new ArrayList<>();
+    ArrayList <Appart> listeAppart = new ArrayList<>();
+    ArrayList <Niveau> listeNiveau = new ArrayList<>();
+    ArrayList <Immeuble> listeImmeuble = new ArrayList<>();
+
+
+
+    public void creationcoin (){
+        System.out.println("Identifiant:");
+        int idc=Lire.i();
+        System.out.println("Abscisse:");
+        double ac=Lire.d();
+        System.out.println("Ordonnée:");
+        double bc=Lire.d();
         
-        Coin c;
-       
-        //Déclaration de la ArrayList        
-        ArrayList <Coin> listeCoin;
+        Coin c = new Coin(idc,ac,bc);
+        listeCoin.add(c);}
         
-        //Initialisation de la liste
-        listeCoin=new ArrayList<>();
-       
-        //Boucle de saisie et d'ajout de Coins dans la liste
-        while(reponsecoin!=0){
-            System.out.println("Identifiant:");
-            int idc=Lire.i();
-            System.out.println("Abscisse:");
-            double ac=Lire.d();
-            System.out.println("Ordonnée:");
-            double bc=Lire.d();
-            //Appel du constructeur pour créer une instance de Coin
-            c=new Coin(idc,ac,bc);
-            listeCoin.add(c);
-            System.out.println("Création d'un coin: 1=oui 0=non");
-            reponsecoin=Lire.i();}
+    sta
 
         //Recherche d'un Coins dans listeCoins par son identifiant
         System.out.println("Identifiant du Coin recheché:");
