@@ -34,6 +34,6 @@ public class Sol {
         return surface;}
     
     public double montantrevetement(){
-        double montant = this.revetmur.prixUnitaire*this.surface();
+        double montant = this.revsol.prixUnitaire*this.surface();
         return montant;}
 }
