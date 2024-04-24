@@ -9,6 +9,11 @@ public class Coin {
         this.x=x;
         this.y=y;}
 
+    public double getx() {
+        return x;
+    }
+
+    
     @Override
     public String toString() {
         return "Coin{" +
