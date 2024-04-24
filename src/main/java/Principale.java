@@ -3,14 +3,14 @@ import java.util.*;
 
 public class Principale {
 
-    ArrayList <Coin> listeCoin = new ArrayList<>();
-    ArrayList <Mur> listeMur = new ArrayList<>();
-    ArrayList <Sol> listeSol = new ArrayList<>();
-    ArrayList <Plafond> listePlafond = new ArrayList<>();
-    ArrayList <Piece> listePiece = new ArrayList<>();
-    ArrayList <Appart> listeAppart = new ArrayList<>();
-    ArrayList <Niveau> listeNiveau = new ArrayList<>();
-    ArrayList <Immeuble> listeImmeuble = new ArrayList<>();
+    public ArrayList <Coin> listeCoin = new ArrayList<>();
+    public ArrayList <Mur> listeMur = new ArrayList<>();
+    public ArrayList <Sol> listeSol = new ArrayList<>();
+    public ArrayList <Plafond> listePlafond = new ArrayList<>();
+    public ArrayList <Piece> listePiece = new ArrayList<>();
+    public ArrayList <Appart> listeAppart = new ArrayList<>();
+    public ArrayList <Niveau> listeNiveau = new ArrayList<>();
+    public ArrayList <Immeuble> listeImmeuble = new ArrayList<>();
 
     public void creationcoin (){
         System.out.println("Identifiant:");
