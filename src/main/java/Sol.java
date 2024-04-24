@@ -22,7 +22,7 @@ public class Sol {
                 ", coin2=" + coin2 +
                 ", coin3=" + coin3 +
                 ", coin4=" + coin4 +
-                ", revplafond=" + revsol +
+                ", revsol=" + revsol +
                 '}';
     }
     
@@ -32,4 +32,8 @@ public class Sol {
         L=Math.sqrt(((this.coin3.x-this.coin2.x)*(this.coin3.x-this.coin2.x))+((this.coin3.y-this.coin2.y)*(this.coin3.y-this.coin2.y)));
         surface=l*L;
         return surface;}
+    
+    public double montantrevetement(){
+        double montant = this.revetmur.prixUnitaire*this.surface();
+        return montant;}
 }
