@@ -24,4 +24,5 @@ public class Piece {
         double montant = this.sol.montantrevetement()+this.plafond.montantrevetement()+this.mur1.montantrevetement()+this.mur2.montantrevetement()+this.mur3.montantrevetement()+this.mur4.montantrevetement();
         return montant;}
     
+    
 }

@@ -52,22 +52,19 @@ public class Principale {
         int idm=Lire.i();
         System.out.println("Id du premier coin du mur:");
         int idam=Lire.i();
-        Coin am = new Coin(0,0,0);
-            for (int i=0;i<listeCoin.size();i++){     
-            if (listeCoin.get(i).idCoin==idam)
-            am = listeCoin.get(i);}
+        Coin am = recherchecoin(idam);
         System.out.println("Id du deuxième coin du mur");
         int idbm=Lire.i();
-        Coin bm = new Coin(0,0,0);
-            for (int i=0;i<listeCoin.size();i++){     
-            if (listeCoin.get(i).idCoin==idbm)
-            bm = listeCoin.get(i);}
+        Coin bm = recherchecoin(idbm);
         System.out.println("Combien de fenetres sur ce mur ?");
             int fm=Lire.i();
         System.out.println("Combien de porte sur ce mur ?");
             int pm=Lire.i();
+        System.out.println("Quel revetement (donner son Id) ?");
+        int idrevetmur=Lire.i();
+        Revetement revetmur = rechercherevetement(idrevetmur);
         
-        Mur m = new Mur(idm, am, bm, fm, pm);
+        Mur m = new Mur(idm, am, bm, fm, pm, revetmur);
         listeMur.add(m);}
     
    public void creationplafond (){
