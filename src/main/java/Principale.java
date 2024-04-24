@@ -59,8 +59,10 @@ public class Principale {
         System.out.println("Identifiant du Mur recheché:");
         int idRechm=Lire.i();
         for (int i=0;i<listeMur.size();i++){     
-            if (listeMur.get(i).idMur==idRechm)
-                listeMur.get(i).afficher();}}
+            if (listeMur.get(i).idMur==idRechm){
+                listeMur.get(i).toString();}
+            else {
+                System.out.println("Pas de mur correspondant");}}}
 
 }
 
