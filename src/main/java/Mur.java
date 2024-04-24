@@ -19,16 +19,16 @@ public class Mur {
     System.out.println("L'identifiant de ce mur est : "+this.idMur+ ", il relie les coins "+this.CoinDebut.idCoin+" et "+this.CoinFin.idCoin+". Il comporte "+this.nbFenetre+" fenetres et "+this.nbPorte+" portes.");
     }
    
-    public double Surface (){
+    public double surface (){
     int a,b,c,e,h,f,p;
     double d, surface;
-    a=Mur.Coindebut.x;
-    b=listeMur.get(idMur).Coindebut.y;
-    c=listeMur.get(idMur).Coindebut.x;
-    e=listeMur.get(idMur).Coindebut.y;
-    h=listeNiveau.get(idNiveau).Hauteursousplafond;
-    f=listeMur.get(idMur).nbFenetre;
-    p=listeMur.get(idMur).nbPorte;
+    a=this.CoinDebut.getx();
+    b=this.CoinDebut.y;
+    c=this.CoinDebut.x;
+    e=this.CoinDebut.y;
+    //h=hauteursousplafond;
+    f=this.nbFenetre;
+    p=this.nbPorte;
     d=Math.sqrt(((a-c)*(a-c))+((b-e)*(b-e)));
     surface=((d*h)-((f*1.44)+(p*1.68)));
     return surface;}
