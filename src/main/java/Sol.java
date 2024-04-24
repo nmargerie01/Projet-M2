@@ -26,9 +26,6 @@ public class Sol {
                 '}';
     }
     
-    public Coin getcoin1(){
-            return coin1;}
-    
     public double surface() {
         double l,L,surface;
         l=Math.sqrt(((this.coin1.x-this.coin2.x)*(this.coin1.x-this.coin2.x))+((this.coin1.y-this.coin2.y)*(this.coin1.y-this.coin2.y)));

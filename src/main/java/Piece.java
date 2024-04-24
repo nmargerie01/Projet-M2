@@ -16,7 +16,7 @@ public class Piece {
     
     public double surface() {
         double l,L,surface;
-        double largeur =  Math.sqrt(((this.sol.getcoin1().x-this.sol.coin2.x)*(this.sol.coin1.x-this.sol.coin2.x))+((this.sol.coin1.y-this.sol.coin2.y)*(this.sol.coin1.y-this.sol.coin2.y)));
+        double largeur =  Math.sqrt(((this.sol.coin1.x-this.sol.coin2.x)*(this.sol.coin1.x-this.sol.coin2.x))+((this.sol.coin1.y-this.sol.coin2.y)*(this.sol.coin1.y-this.sol.coin2.y)));
         double longueur = Math.sqrt(((this.sol.coin3.x-this.sol.coin2.x)*(this.sol.coin3.x-this.sol.coin2.x))+((this.sol.coin3.y-this.sol.coin2.y)*(this.sol.coin3.y-this.sol.coin2.y)));
         surface=longueur * largeur;
         return surface;}
