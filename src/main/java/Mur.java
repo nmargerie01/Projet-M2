@@ -20,18 +20,12 @@ public class Mur {
     }
    
     public double surface (){
-    int a,b,c,e,h,f,p;
-    double d, surface;
-    a=this.CoinDebut.getx();
-    b=this.CoinDebut.y;
-    c=this.CoinDebut.x;
-    e=this.CoinDebut.y;
-    //h=hauteursousplafond;
-    f=this.nbFenetre;
-    p=this.nbPorte;
-    d=Math.sqrt(((a-c)*(a-c))+((b-e)*(b-e)));
-    surface=((d*h)-((f*1.44)+(p*1.68)));
-    return surface;}
+        double h = hauteursousplafond;
+        int f=this.nbFenetre;
+        int p=this.nbPorte;
+        double d=Math.sqrt(((this.CoinDebut.x-this.CoinFin.x)*(this.CoinDebut.x-this.CoinFin.x))+((this.CoinDebut.y-this.CoinFin.y)*(this.CoinDebut.y-this.CoinFin.y)));
+        double surface=((d*h)-((f*1.44)+(p*1.68)));
+        return surface;}
 }
 
 
