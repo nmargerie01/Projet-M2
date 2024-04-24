@@ -11,6 +11,8 @@ public class Principale {
     public ArrayList <Appart> listeAppart = new ArrayList<>();
     public ArrayList <Niveau> listeNiveau = new ArrayList<>();
     public ArrayList <Immeuble> listeImmeuble = new ArrayList<>();
+    public ArrayList <Revetement> listeRevetement;
+
 
     public void creationcoin (){
         System.out.println("Identifiant:");
@@ -23,15 +25,28 @@ public class Principale {
         Coin c = new Coin(idc,ac,bc);
         listeCoin.add(c);}
         
-    public void recherchecoin (){
-        System.out.println("Identifiant du Coin recheché:");
-        int idRechc=Lire.i();
-            for (int i=0;i<listeCoin.size();i++){     
-                if (listeCoin.get(i).idCoin ==idRechc){
-                    listeCoin.get(idRechc).toString();}
-                else {
-                    System.out.println("Pas de coin correspondant");}}}
-        
+    public void creationsol (){
+        System.out.println("Identifiant:");
+        int ids=Lire.i();
+        System.out.println("Id du premier coin:");
+        int idas=Lire.i();
+        Coin as = recherchecoin(idas);
+        System.out.println("Id du deuxième coin:");
+        int idbs=Lire.i();
+        Coin bs = recherchecoin(idbs);
+        System.out.println("Id du troisieme coin:");
+        int idcs=Lire.i();
+        Coin cs = recherchecoin(idcs);
+        System.out.println("Id du quatrieme coin:");
+        int idds=Lire.i();
+        Coin ds = recherchecoin(idds);
+        System.out.println("Quel revetement (donner son Id) ?");
+        int idrevetsol=Lire.i();
+        Revetement revets = rechercherevetement(idrevetsol);
+     
+        Sol s = new Sol(ids, as, bs, cs, ds, revets);
+        listeSol.add(s);}
+    
     public void creationmur (){
         System.out.println("Identifiant:");
         int idm=Lire.i();
@@ -55,16 +70,59 @@ public class Principale {
         Mur m = new Mur(idm, am, bm, fm, pm);
         listeMur.add(m);}
     
-    public void recherchemur (){
-        System.out.println("Identifiant du Mur recheché:");
-        int idRechm=Lire.i();
-        for (int i=0;i<listeMur.size();i++){     
-            if (listeMur.get(i).idMur==idRechm){
-                listeMur.get(i).toString();}
-            else {
-                System.out.println("Pas de mur correspondant");}}}
-
+   public void creationplafond (){
+        System.out.println("Identifiant:");
+        int idp=Lire.i();
+        System.out.println("Id du premier coin:");
+        int idap=Lire.i();
+        Coin ap = recherchecoin(idap);
+        System.out.println("Id du deuxième coin:");
+        int idbp=Lire.i();
+        Coin bp = recherchecoin(idbp);
+        System.out.println("Id du troisieme coin:");
+        int idcp=Lire.i();
+        Coin cp = recherchecoin(idcp);
+        System.out.println("Id du quatrieme coin:");
+        int iddp=Lire.i();
+        Coin dp = recherchecoin(iddp);
+        System.out.println("Quel revetement (donner son Id) ?");
+        int idrevetplafond=Lire.i();
+        Revetement revetp = rechercherevetement(idrevetplafond);
+     
+        Plafond p = new Plafond(idp, ap, bp, cp, dp, revetp);
+        listePlafond.add(p);} 
+    
+    public Coin recherchecoin (int id) {
+        for (Coin coin : listeCoin) {
+            if (coin.idCoin == id) {
+                return coin;}}
+        return null;}
+    
+    public Mur recherchemur (int id) {
+        for (Mur mur : listeMur) {
+            if (mur.idMur == id) {
+                return mur;}}
+        return null;}
+    
+    public Sol recherchesol (int id) {
+        for (Sol sol : listeSol) {
+            if (sol.idSol == id) {
+                return sol;}}
+        return null;}
+    
+    public Revetement rechercherevetement (int id) {
+        for (Revetement revetement : listeRevetement) {
+            if (revetement.idRevetement == id) {
+                return revetement;}}
+        return null;}
+    
+    public Piece recherchepiece (int id) {
+        for (Piece piece : listePiece) {
+            if (piece.idPiece == id) {
+                return piece;}}
+        return null;}
 }
+
 
 
 

@@ -1,4 +1,3 @@
-
 public class Plafond {
 
 int idPlafond;
