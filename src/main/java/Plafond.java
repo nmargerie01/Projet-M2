@@ -30,16 +30,9 @@ Plafond (int id,Coin a, Coin b, Coin c, Coin d, Revetement revplafond){
     }
     
     public double surface() {
-        int a,b,c,d,e,f;
         double l,L,surface;
-        a=Plafond.coin1.x;
-        b=this.coin1.y;
-        c=this.coin2.x;
-        d=this.coin2.y;
-        e=this.coin3.x;
-        f=this.coin3.y;
-        l=Math.sqrt(((a-c)*(a-c))+((b-d)*(b-d)));
-        L=Math.sqrt(((e-c)*(e-c))+((f-d)*(f-d)));
+        l=Math.sqrt(((this.coin1.x-this.coin2.x)*(this.coin1.x-this.coin2.x))+((this.coin1.y-this.coin2.y)*(this.coin1.y-this.coin2.y)));
+        L=Math.sqrt(((this.coin3.x-this.coin2.x)*(this.coin3.x-this.coin2.x))+((this.coin3.y-this.coin2.y)*(this.coin3.y-this.coin2.y)));
         surface=l*L;
         return surface;}
 }
