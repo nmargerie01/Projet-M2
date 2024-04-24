@@ -27,18 +27,15 @@ public class Revetement {
             String[] parties = line.split(";");
             int id = Integer.parseInt(parties[0]);
             String nom = parties[1];
-            if (Integer.valueOf(parties[2]) == 0){
-                boolean mur = false;}
-            if (Integer.valueOf(parties[2]) == 1);{
-                boolean mur = true;}
-            if (Integer.valueOf(parties[3]) == 0);{
-                boolean sol = false;}
-            if (Integer.valueOf(parties[3]) == 1);{
-                boolean sol = true;}
-            if (Integer.valueOf(parties[4]) == 0);{
-                boolean plafond = false;}
-            if (Integer.valueOf(parties[4]) == 1);{
-                boolean plafond = true;}
+            boolean mur = false;
+            if (Integer.valueOf(parties[2]) == 1){
+                mur = true;}
+            boolean sol = false;
+            if (Integer.valueOf(parties[3]) == 1){
+                sol = true;}
+            boolean plafond = false;
+            if (Integer.valueOf(parties[4]) == 1){
+                plafond = true;}
             double prix = Double.parseDouble(parties[5]);
 
             Revetement r = new Revetement(id, nom, mur, sol, plafond, prix);
