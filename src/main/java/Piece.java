@@ -15,10 +15,9 @@ public class Piece {
         this.mur4 = mur4;}
     
     public double surface() {
-        double l,L,surface;
         double largeur =  Math.sqrt(((this.sol.coin1.x-this.sol.coin2.x)*(this.sol.coin1.x-this.sol.coin2.x))+((this.sol.coin1.y-this.sol.coin2.y)*(this.sol.coin1.y-this.sol.coin2.y)));
         double longueur = Math.sqrt(((this.sol.coin3.x-this.sol.coin2.x)*(this.sol.coin3.x-this.sol.coin2.x))+((this.sol.coin3.y-this.sol.coin2.y)*(this.sol.coin3.y-this.sol.coin2.y)));
-        surface=longueur * largeur;
+        double surface=longueur * largeur;
         return surface;}
     
 }
